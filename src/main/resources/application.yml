@@ -1,0 +1,35 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: inbox-application
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: <CLIENT_ID>
+            client-secret: <CLIENT_SECRET>
+  data:
+    cassandra:
+      keyspace-name: main
+      username: <USERNAME>
+      password: <PASSWEORD>
+      schema-action: CREATE_IF_NOT_EXISTS
+      request:
+        timeout: 10s
+      connection:
+        connect-timeout: 10s
+        init-query-timeout: 10s
+
+astra:
+  db:
+    id: <DB_ID>
+    region: <REGION>
+    keyspace: main
+    application:
+      token: <TOKEN>
+
+datastax.astra:
+  secure-connect-bundle: secure-connect.zip

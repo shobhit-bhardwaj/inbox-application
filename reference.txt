@@ -1,0 +1,14 @@
+https://astra.datastax.com
+
+truncate table main.folders_by_user;
+truncate table main.emails_by_user_folder;
+truncate table main.emails_by_id;
+
+select * from main.folders_by_user;
+select * from main.emails_by_user_folder;
+select * from main.emails_by_id;
+
+
+localhost:9000/
+http://localhost:9000/emails/<timeUUID>
+localhost:9000/compose
